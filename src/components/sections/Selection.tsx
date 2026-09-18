@@ -15,7 +15,6 @@ export const Selection: React.FC<SelectionProps> = ({ onOpenApply }) => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeader
-            label="07 — ADMISSIONS JOURNEY"
             title="The 6-Stage Selection Process"
             description="A transparent, merit-driven evaluation ensuring that academic aptitude and national dedication are the sole selection criteria."
           />

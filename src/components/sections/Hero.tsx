@@ -1,7 +1,6 @@
 import React from "react";
 import { APV_DATA } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, Compass, ShieldCheck } from "lucide-react";
 import { assetUrl } from "@/lib/utils";
 
@@ -11,22 +10,10 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
   return (
-    <section className="relative w-full pt-8 pb-16 sm:pb-24 lg:pb-32 overflow-hidden bg-paper">
+    <section className="relative w-full pt-10 sm:pt-14 pb-16 sm:pb-24 lg:pb-32 overflow-hidden bg-paper">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Top Metadata Row */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-ink-900/10">
-          <div className="flex items-center space-x-3">
-            <span className="meta-label text-navy-950 font-bold">
-              {APV_DATA.hero.label}
-            </span>
-          </div>
-          <Badge variant="navy" className="text-[10px]">
-            Session 2026 Admissions Open
-          </Badge>
-        </div>
-
         {/* Oversized Headline & Subtitle */}
-        <div className="pt-10 sm:pt-16 pb-12 sm:pb-16 max-w-5xl space-y-6">
+        <div className="pb-12 sm:pb-16 max-w-5xl space-y-6 sm:space-y-8">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[5rem] font-bold text-navy-950 tracking-tight leading-[1.05]">
             Where potential finds a path to public service.
           </h1>

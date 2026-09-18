@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
-  label: string;
+  label?: string;
   title: string;
   description?: string;
   className?: string;
@@ -18,14 +18,16 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <div className={cn("space-y-4 max-w-3xl", className)}>
-      <div
-        className={cn(
-          "meta-label font-bold tracking-widest",
-          isDark ? "text-gold-400" : "text-navy-900/70"
-        )}
-      >
-        {label}
-      </div>
+      {label && (
+        <div
+          className={cn(
+            "meta-label font-bold tracking-widest",
+            isDark ? "text-gold-400" : "text-navy-900/70"
+          )}
+        >
+          {label}
+        </div>
+      )}
       <h2
         className={cn(
           "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12]",

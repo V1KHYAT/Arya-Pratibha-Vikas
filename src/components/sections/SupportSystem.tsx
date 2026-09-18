@@ -15,7 +15,6 @@ export const SupportSystem: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
         {/* Section Header */}
         <SectionHeader
-          label="04 — WHY APV"
           title="The Complete Support Ecosystem"
           description="Everything a serious aspirant requires to succeed in the Civil Services Examination—arranged with zero financial distraction."
         />

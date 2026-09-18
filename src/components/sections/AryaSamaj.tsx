@@ -11,9 +11,6 @@ export const AryaSamaj: React.FC = () => {
         {/* Top Label & Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-5 space-y-4">
-            <span className="meta-label text-gold-400">
-              {APV_DATA.aryaSamaj.label}
-            </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight leading-[1.08] text-white">
               {APV_DATA.aryaSamaj.title}
             </h2>

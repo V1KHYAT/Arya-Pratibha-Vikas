@@ -14,7 +14,6 @@ export const Impact: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeader
-            label="06 — IMPACT & SUCCESS STORIES"
             title="Voices of APV Fellows"
             description="Real stories of candidates from humble backgrounds who cleared the Civil Services Examination with complete APV sponsorship."
           />

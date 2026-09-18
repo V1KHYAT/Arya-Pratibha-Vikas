@@ -13,7 +13,6 @@ export const Centres: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
         {/* Section Header */}
         <SectionHeader
-          label="08 — RESIDENTIAL CENTRES"
           title="Our Primary Academic Campus"
           description="A dedicated campus in the national capital providing fellows with modern academic infrastructure and quiet residential sanctuary."
         />

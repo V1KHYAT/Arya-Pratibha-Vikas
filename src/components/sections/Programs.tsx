@@ -16,7 +16,6 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenApply }) => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeader
-            label="03 — ACADEMIC PROGRAMS"
             title="Choose your path."
             description="Two integrated pathways designed to take meritorious graduates from foundational preparation to the final UPSC interview rank list."
           />

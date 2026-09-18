@@ -18,7 +18,6 @@ export const Positioning: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-5">
             <SectionHeader
-              label={APV_DATA.positioning.label}
               title="What APV exists to do."
             />
           </div>

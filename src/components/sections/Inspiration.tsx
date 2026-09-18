@@ -11,7 +11,6 @@ export const Inspiration: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
         {/* Section Header */}
         <SectionHeader
-          label="05 — OUR INSPIRATION"
           title="Guided by visionary leaders of industry and society."
           description="The noble patrons whose philanthropic foresight and moral guardianship sustain the mission of Arya Pratibha Vikas Sansthan."
         />

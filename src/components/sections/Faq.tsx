@@ -21,7 +21,6 @@ export const Faq: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeader
-            label="09 — FREQUENT INQUIRIES"
             title="Before you apply."
             description="Essential guidelines and answers to common questions regarding eligibility, campus living, and fellowship terms."
           />
