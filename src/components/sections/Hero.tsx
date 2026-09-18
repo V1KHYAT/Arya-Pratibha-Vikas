@@ -35,20 +35,24 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-5 pt-4">
             <Button
               onClick={onOpenApply}
               variant="primary"
               size="lg"
-              className="group"
+              className="group px-8 sm:px-10 py-4 text-sm sm:text-base font-bold shadow-sm hover:shadow-md transition-all duration-200"
             >
               <span>APPLY NOW</span>
-              <ArrowUpRight className="h-4 w-4 ml-2 text-gold-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="h-4 w-4 ml-2.5 text-gold-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
 
             <a href="#programs">
-              <Button variant="outline" size="lg">
-                <Compass className="h-4 w-4 mr-2 text-navy-900" />
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 sm:px-10 py-4 text-sm sm:text-base font-bold transition-all duration-200"
+              >
+                <Compass className="h-4 w-4 mr-2.5 text-navy-900" />
                 <span>EXPLORE PROGRAMS</span>
               </Button>
             </a>

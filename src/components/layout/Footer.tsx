@@ -1,9 +1,14 @@
 import React from "react";
 import { APV_DATA } from "@/data/content";
+import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Phone, Mail, MapPin } from "lucide-react";
 import { assetUrl } from "@/lib/utils";
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenApply?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenApply }) => {
   return (
     <footer className="w-full bg-navy-950 text-white pt-24 pb-16 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -152,12 +157,26 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
+            {onOpenApply && (
+              <div className="pt-3">
+                <Button
+                  onClick={onOpenApply}
+                  variant="gold"
+                  size="md"
+                  className="w-full sm:w-auto px-6 py-3 text-xs font-bold shadow-xs hover:shadow-md transition-all duration-200"
+                >
+                  <span>APPLY FOR FELLOWSHIP</span>
+                  <ArrowUpRight className="h-3.5 w-3.5 ml-1.5" />
+                </Button>
+              </div>
+            )}
+
             <div className="pt-2">
               <a
                 href="https://pratibhavikas.org"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center text-xs font-bold text-gold-400 hover:text-white"
+                className="inline-flex items-center text-xs font-bold text-gold-400 hover:text-white transition-colors"
               >
                 <span>pratibhavikas.org archive</span>
                 <ArrowUpRight className="h-3 w-3 ml-1" />

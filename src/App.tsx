@@ -59,7 +59,7 @@ export const App: React.FC = () => {
       </main>
 
       {/* 12: Dark Institutional Footer */}
-      <Footer />
+      <Footer onOpenApply={() => setApplyModalOpen(true)} />
 
       {/* Interactive Fellowship Application Modal */}
       <ApplyModal

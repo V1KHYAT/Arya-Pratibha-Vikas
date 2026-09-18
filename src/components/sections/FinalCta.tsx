@@ -26,24 +26,24 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenApply }) => {
         </div>
 
         {/* Action Controls */}
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-4">
           <Button
             onClick={onOpenApply}
             variant="gold"
             size="lg"
-            className="group px-8"
+            className="group px-8 sm:px-10 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all duration-200"
           >
             <span>APPLY NOW</span>
-            <ArrowUpRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="h-4 w-4 ml-2.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Button>
 
           <a href={`tel:${APV_DATA.meta.helpline}`}>
             <Button
               variant="outline"
               size="lg"
-              className="text-white border-white/20 hover:border-white hover:bg-white/10 px-8"
+              className="text-white border-white/20 hover:border-white hover:bg-white/10 px-8 sm:px-10 py-4 text-sm sm:text-base font-bold transition-all duration-200"
             >
-              <Phone className="h-4 w-4 mr-2 text-gold-400" />
+              <Phone className="h-4 w-4 mr-2.5 text-gold-400" />
               <span>TALK TO US</span>
             </Button>
           </a>
