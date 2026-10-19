@@ -147,7 +147,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply }) => {
                 </a>
               </div>
               <div className="flex items-center space-x-2.5">
-                <Mail className="h-4 w-4 text-gold-400 shrink-0" />
+                <Mail className="h-4 w-4 text-terracotta-400 shrink-0" />
                 <a
                   href={`mailto:${APV_DATA.meta.email}`}
                   className="hover:text-white transition-colors"
@@ -161,9 +161,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply }) => {
               <div className="pt-3">
                 <Button
                   onClick={onOpenApply}
-                  variant="gold"
+                  variant="terracotta"
                   size="md"
-                  className="w-full sm:w-auto px-6 py-3 text-xs font-bold shadow-xs hover:shadow-md transition-all duration-200"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-bold shadow-xs hover:shadow-md transition-all duration-200"
                 >
                   <span>APPLY FOR FELLOWSHIP</span>
                   <ArrowUpRight className="h-3.5 w-3.5 ml-1.5" />
@@ -176,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenApply }) => {
                 href="https://pratibhavikas.org"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center text-xs font-bold text-gold-400 hover:text-white transition-colors"
+                className="inline-flex items-center text-xs font-bold text-terracotta-400 hover:text-white transition-colors"
               >
                 <span>pratibhavikas.org archive</span>
                 <ArrowUpRight className="h-3 w-3 ml-1" />

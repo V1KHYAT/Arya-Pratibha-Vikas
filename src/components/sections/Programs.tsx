@@ -61,10 +61,10 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenApply }) => {
                     {prog.description}
                   </p>
 
-                  <div className="space-y-2 pt-2">
+                  <div className="space-y-2.5 pt-2">
                     {prog.highlights.map((h, idx) => (
-                      <div key={idx} className="flex items-start space-x-2 text-xs sm:text-sm text-ink-800 font-medium">
-                        <CheckCircle2 className="h-4 w-4 text-navy-900 shrink-0 mt-0.5" />
+                      <div key={idx} className="flex items-start space-x-2.5 text-xs sm:text-sm text-ink-800 font-medium">
+                        <CheckCircle2 className="h-4 w-4 text-terracotta-500 shrink-0 mt-0.5" />
                         <span>{h}</span>
                       </div>
                     ))}
@@ -74,15 +74,15 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenApply }) => {
                 <div className="pt-8 border-t border-ink-900/5 flex items-center justify-between">
                   <Button
                     onClick={onOpenApply}
-                    variant="primary"
+                    variant="terracotta"
                     size="md"
-                    className="group"
+                    className="group rounded-full px-7"
                   >
                     <span>{prog.ctaText}</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 text-gold-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </Button>
 
-                  <span className="meta-label text-ink-400 text-[10px]">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-ink-400">
                     100% Need-Based
                   </span>
                 </div>

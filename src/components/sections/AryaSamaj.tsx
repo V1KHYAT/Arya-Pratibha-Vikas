@@ -22,18 +22,18 @@ export const AryaSamaj: React.FC = () => {
             </p>
 
             <div className="p-6 rounded-card bg-white/5 border border-white/10 space-y-3">
-              <div className="flex items-center space-x-2 text-xs font-bold text-gold-400">
+              <div className="flex items-center space-x-2 text-xs font-bold text-terracotta-400">
                 <Award className="h-4 w-4" />
-                <span className="meta-label text-[10px]">{APV_DATA.aryaSamaj.motto}</span>
+                <span className="text-[11px] font-bold tracking-widest uppercase">{APV_DATA.aryaSamaj.motto}</span>
               </div>
-              <blockquote className="text-sm sm:text-base italic text-white/90 leading-relaxed font-normal">
+              <blockquote className="text-base italic text-white/95 leading-relaxed font-normal">
                 "{APV_DATA.aryaSamaj.quote}"
               </blockquote>
             </div>
 
             <div className="pt-2">
               <a href="#about">
-                <Button variant="gold" size="md">
+                <Button variant="terracotta" size="md" className="rounded-full px-7">
                   <span>EXPLORE ARYA SAMAJ PHILOSOPHY</span>
                   <ArrowUpRight className="h-4 w-4 ml-1.5" />
                 </Button>

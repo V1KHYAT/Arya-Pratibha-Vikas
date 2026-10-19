@@ -11,11 +11,23 @@ export default {
       },
       colors: {
         paper: {
-          DEFAULT: '#F6F5F1', // Primary warm off-white / ivory
-          subtle: '#EFECE4',
-          muted: '#E6E3DB',
+          DEFAULT: '#FAF7F2', // Warm luminous ivory from hero reference
+          subtle: '#F2EDE4',
+          muted: '#E7E0D3',
           card: '#FFFFFF',
-          dark: '#102042',   // Scholarly deep collegiate blue (warm, not tech-black)
+          dark: '#102042',   // Scholarly deep collegiate blue
+        },
+        terracotta: {
+          50: '#FDF7F3',
+          100: '#FAEDE6',
+          200: '#F5DCB0',
+          300: '#ECBE9B',
+          400: '#D56E3D',
+          500: '#C85A28',    // Primary brand terracotta from hero reference
+          600: '#B34C1D',
+          700: '#943A14',
+          800: '#782F13',
+          900: '#642714',
         },
         navy: {
           950: '#102042',    // Rich collegiate Oxford blue (dignified, educational)
@@ -29,16 +41,16 @@ export default {
           50: '#F3F6FC',
         },
         ink: {
-          950: '#12151B',
-          900: '#1A1D24',    // Softened near-black for warmer reading comfort
-          800: '#2B2F38',
-          700: '#424754',
-          600: '#5A6070',
-          500: '#737A8C',
-          400: '#9AA1B2',
-          300: '#C5CAD7',
-          200: '#E2E5EE',
-          100: '#EFF1F6',
+          950: '#18181B',
+          900: '#27272A',    // Softened near-black for warmer reading comfort
+          800: '#3F3F46',
+          700: '#52525B',
+          600: '#71717A',
+          500: '#A1A1AA',
+          400: '#D4D4D8',
+          300: '#E4E4E7',
+          200: '#F4F4F5',
+          100: '#FAFAFA',
         },
         gold: {
           700: '#A37916',

@@ -177,9 +177,9 @@ export const ApplyModal: React.FC<ApplyModalProps> = ({
                       }
                       setStep(2);
                     }}
-                    variant="primary"
+                    variant="terracotta"
                     size="md"
-                    className="flex items-center space-x-1.5"
+                    className="flex items-center space-x-1.5 rounded-full px-6"
                   >
                     <span>Proceed to Academic Information</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -290,8 +290,9 @@ export const ApplyModal: React.FC<ApplyModalProps> = ({
                   <Button
                     type="submit"
                     disabled={!formData.termsAccepted}
-                    variant="primary"
+                    variant="terracotta"
                     size="md"
+                    className="rounded-full px-7"
                   >
                     Submit Application for 2026 Batch
                   </Button>

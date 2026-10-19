@@ -32,10 +32,10 @@ export const Faq: React.FC = () => {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-pill meta-label text-[10px] transition-all ${
+              className={`px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all ${
                 selectedCategory === cat
-                  ? "bg-navy-900 text-white shadow-xs"
-                  : "bg-paper text-ink-700 hover:text-navy-950 border border-ink-900/5"
+                  ? "bg-terracotta-500 text-white shadow-xs"
+                  : "bg-paper text-ink-700 hover:text-ink-950 border border-ink-900/10"
               }`}
             >
               {cat}
@@ -48,9 +48,9 @@ export const Faq: React.FC = () => {
           <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
             {filteredFaqs.map((faq, idx) => (
               <AccordionItem key={idx} value={`item-${idx}`}>
-                <AccordionTrigger className="text-left font-bold text-base sm:text-lg text-navy-950 hover:text-navy-700">
+                <AccordionTrigger className="text-left font-bold text-base sm:text-lg text-ink-950 hover:text-terracotta-600 transition-colors">
                   <div className="flex items-center space-x-3 pr-2">
-                    <span className="meta-label text-[10px] text-gold-600 shrink-0">
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-terracotta-600 shrink-0">
                       [{faq.category}]
                     </span>
                     <span>{faq.question}</span>
@@ -67,7 +67,7 @@ export const Faq: React.FC = () => {
         {/* Admissions Help Desk Banner */}
         <div className="rounded-card bg-paper-subtle card-border p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="font-bold text-lg text-navy-950">
+            <h4 className="font-bold text-lg text-ink-950">
               Need personalized guidance from the academic desk?
             </h4>
             <p className="text-xs sm:text-sm text-ink-600 font-normal">
@@ -77,14 +77,14 @@ export const Faq: React.FC = () => {
 
           <div className="flex items-center space-x-3 shrink-0">
             <a href={`tel:${APV_DATA.meta.helpline}`}>
-              <Button variant="outline" size="sm" className="space-x-1.5">
-                <Phone className="h-3.5 w-3.5" />
+              <Button variant="outline" size="sm" className="rounded-full px-5 space-x-1.5">
+                <Phone className="h-3.5 w-3.5 text-terracotta-500" />
                 <span>{APV_DATA.meta.helpline}</span>
               </Button>
             </a>
             <a href={`mailto:${APV_DATA.meta.email}`}>
-              <Button variant="outline" size="sm" className="space-x-1.5">
-                <Mail className="h-3.5 w-3.5" />
+              <Button variant="outline" size="sm" className="rounded-full px-5 space-x-1.5">
+                <Mail className="h-3.5 w-3.5 text-terracotta-500" />
                 <span>EMAIL US</span>
               </Button>
             </a>

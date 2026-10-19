@@ -79,7 +79,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 sm:h-24 flex items-center justify-between">
         {/* Brand identity */}
         <a href="#" className="flex items-center space-x-3.5 group">
-          <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white p-1 border border-ink-900/10 flex items-center justify-center shrink-0 shadow-xs transition-transform group-hover:scale-105">
+          <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-white p-1 border border-ink-900/10 flex items-center justify-center shrink-0 shadow-xs transition-transform group-hover:scale-105">
             <img
               src={assetUrl("/assets/logo.png")}
               alt="APV Emblem"
@@ -90,17 +90,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-sans font-bold text-lg sm:text-xl text-navy-950 tracking-tight leading-tight">
+            <span className="font-sans font-bold text-lg sm:text-xl text-ink-950 tracking-tight leading-tight">
               Arya Pratibha Vikas
             </span>
-            <span className="meta-label text-ink-500 tracking-wider">
-              Sansthan • New Delhi
+            <span className="text-[9.5px] font-bold text-ink-500 uppercase tracking-[0.16em] leading-none pt-0.5">
+              SANSTHAN • NEW DELHI
             </span>
           </div>
         </a>
 
         {/* Minimal Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-7">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
             <div
               key={item.label}
@@ -110,14 +110,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
             >
               <a
                 href={item.href}
-                className={`flex items-center space-x-1 meta-label text-[11px] transition-colors ${
-                  item.highlight
-                    ? "text-navy-950 font-bold hover:text-gold-600"
-                    : "text-ink-700 hover:text-navy-950"
-                }`}
+                className="flex items-center space-x-1.5 text-[11px] font-bold tracking-[0.12em] uppercase text-ink-700 hover:text-ink-950 transition-colors"
               >
                 <span>{item.label}</span>
-                <ChevronDown className="h-3 w-3 text-ink-400 group-hover:text-navy-950 transition-transform group-hover:rotate-180" />
+                <ChevronDown className="h-3 w-3 text-ink-400 group-hover:text-ink-950 transition-transform group-hover:translate-y-0.5" />
               </a>
 
               {/* Sub-menu Dropdown */}
@@ -129,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
                         key={sub.label}
                         href={sub.href}
                         onClick={() => setActiveDropdown(null)}
-                        className="block px-3 py-2 text-xs font-medium text-ink-700 hover:text-navy-950 hover:bg-paper-subtle rounded-lg transition-colors"
+                        className="block px-3 py-2 text-xs font-medium text-ink-700 hover:text-ink-950 hover:bg-paper-subtle rounded-lg transition-colors"
                       >
                         {sub.label}
                       </a>
@@ -145,18 +141,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
         <div className="flex items-center space-x-3">
           <Button
             onClick={onOpenApply}
-            variant="primary"
+            variant="terracotta"
             size="md"
-            className="group"
+            className="group px-6 py-2.5 rounded-full text-xs font-bold tracking-wider"
           >
             <span>APPLY NOW</span>
-            <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-gold-400" />
+            <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Button>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-pill hover:bg-paper-subtle text-navy-950 focus:outline-none"
+            className="lg:hidden p-2 rounded-pill hover:bg-paper-subtle text-ink-950 focus:outline-none"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

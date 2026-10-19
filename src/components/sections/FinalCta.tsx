@@ -12,7 +12,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenApply }) => {
     <section className="w-full section-gap bg-navy-950 text-white relative overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-10 sm:space-y-12">
         <div className="space-y-4 max-w-4xl mx-auto">
-          <span className="meta-label text-gold-400">
+          <span className="text-[11px] font-bold uppercase tracking-widest text-terracotta-400">
             ADMISSIONS FOR BATCH 2026 NOW OPEN
           </span>
 
@@ -29,9 +29,9 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenApply }) => {
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 pt-4">
           <Button
             onClick={onOpenApply}
-            variant="gold"
+            variant="terracotta"
             size="lg"
-            className="group px-8 sm:px-10 py-4 text-sm sm:text-base font-bold shadow-md hover:shadow-lg transition-all duration-200"
+            className="group px-8 sm:px-10 py-4 text-sm sm:text-base font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200"
           >
             <span>APPLY NOW</span>
             <ArrowUpRight className="h-4 w-4 ml-2.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -41,15 +41,15 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenApply }) => {
             <Button
               variant="outline"
               size="lg"
-              className="text-white border-white/20 hover:border-white hover:bg-white/10 px-8 sm:px-10 py-4 text-sm sm:text-base font-bold transition-all duration-200"
+              className="text-white border-white/20 hover:border-white hover:bg-white/10 px-8 sm:px-10 py-4 text-sm sm:text-base font-bold rounded-full transition-all duration-200"
             >
-              <Phone className="h-4 w-4 mr-2.5 text-gold-400" />
+              <Phone className="h-4 w-4 mr-2.5 text-terracotta-400" />
               <span>TALK TO US</span>
             </Button>
           </a>
         </div>
 
-        <div className="pt-6 meta-label text-[11px] text-ink-400">
+        <div className="pt-6 text-[11px] font-bold uppercase tracking-widest text-ink-400">
           No Application Fee • Merit-Based Fellowship Screening
         </div>
       </div>

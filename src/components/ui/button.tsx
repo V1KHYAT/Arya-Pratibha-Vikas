@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "gold";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "gold" | "terracotta";
   size?: "sm" | "md" | "lg" | "icon";
 }
 
@@ -15,16 +15,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap rounded-pill font-sans text-xs font-bold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy-900 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none",
+          "inline-flex items-center justify-center whitespace-nowrap rounded-pill font-sans text-xs font-bold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none",
           {
             // Variants
+            "bg-terracotta-500 text-white hover:bg-terracotta-600 active:bg-terracotta-700 shadow-sm hover:shadow-md":
+              variant === "terracotta",
             "bg-navy-900 text-white hover:bg-navy-800 active:bg-navy-950 shadow-xs":
               variant === "primary",
             "bg-gold-500 text-navy-950 hover:bg-gold-400 active:bg-gold-600 shadow-xs":
               variant === "gold",
             "bg-white text-navy-950 border border-ink-900/10 hover:bg-paper-subtle active:bg-paper-muted":
               variant === "secondary",
-            "border border-ink-900/20 bg-transparent text-ink-900 hover:border-ink-900 hover:bg-white/50 active:bg-paper-subtle":
+            "border border-ink-900/20 bg-transparent text-ink-900 hover:border-ink-900 hover:bg-white/60 active:bg-paper-subtle":
               variant === "outline",
             "text-ink-700 hover:text-navy-950 hover:bg-ink-100/50 active:bg-ink-200/50":
               variant === "ghost",

@@ -21,12 +21,12 @@ export const Selection: React.FC<SelectionProps> = ({ onOpenApply }) => {
 
           <Button
             onClick={onOpenApply}
-            variant="primary"
+            variant="terracotta"
             size="md"
-            className="shrink-0"
+            className="shrink-0 rounded-full px-7"
           >
             <span>APPLY NOW FOR 2026</span>
-            <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 text-gold-400" />
+            <ArrowUpRight className="h-3.5 w-3.5 ml-1.5" />
           </Button>
         </div>
 
@@ -35,19 +35,19 @@ export const Selection: React.FC<SelectionProps> = ({ onOpenApply }) => {
           {APV_DATA.selectionProcess.map((step) => (
             <div
               key={step.step}
-              className="rounded-card bg-paper card-border p-8 flex flex-col justify-between space-y-6 shadow-xs hover:border-navy-900/30 transition-all"
+              className="rounded-card bg-paper card-border p-8 flex flex-col justify-between space-y-6 shadow-xs hover:border-terracotta-500/40 hover:shadow-sm transition-all"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="meta-label text-navy-950 font-bold">
+                  <span className="text-xs font-bold uppercase tracking-widest text-terracotta-600">
                     STAGE {step.step}
                   </span>
-                  <span className="meta-label text-ink-400 text-[10px]">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-ink-400">
                     {step.subtitle}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-navy-950 tracking-tight">
+                <h3 className="text-xl font-bold text-ink-950 tracking-tight">
                   {step.title}
                 </h3>
 
@@ -64,9 +64,9 @@ export const Selection: React.FC<SelectionProps> = ({ onOpenApply }) => {
         </div>
 
         {/* Examination Specifics Callout Card */}
-        <div className="rounded-card-lg bg-navy-950 text-white p-8 sm:p-10 card-border-dark flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        <div className="rounded-card-lg bg-navy-950 text-white p-8 sm:p-10 card-border-dark flex flex-col lg:flex-row lg:items-center justify-between gap-6 shadow-md">
           <div className="space-y-2 max-w-2xl">
-            <span className="meta-label text-gold-400">
+            <span className="text-[10px] font-bold tracking-widest uppercase text-terracotta-400">
               WRITTEN TEST DETAIL • NEW DELHI
             </span>
             <h4 className="text-xl sm:text-2xl font-bold text-white">
@@ -79,9 +79,9 @@ export const Selection: React.FC<SelectionProps> = ({ onOpenApply }) => {
 
           <Button
             onClick={onOpenApply}
-            variant="gold"
+            variant="terracotta"
             size="md"
-            className="shrink-0"
+            className="shrink-0 rounded-full px-7"
           >
             <span>REGISTER FOR WRITTEN EXAM</span>
             <ArrowUpRight className="h-4 w-4 ml-1.5" />

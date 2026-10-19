@@ -49,7 +49,7 @@ export const Inspiration: React.FC = () => {
                 </h3>
               </div>
 
-              <blockquote className="text-base sm:text-lg text-navy-900 font-medium leading-relaxed italic border-l-2 border-gold-500 pl-4 py-1">
+              <blockquote className="text-base sm:text-lg text-ink-900 font-medium leading-relaxed italic border-l-2 border-terracotta-500 pl-4 py-1">
                 "{APV_DATA.skArya.quote}"
               </blockquote>
 
@@ -59,9 +59,9 @@ export const Inspiration: React.FC = () => {
 
               <div className="pt-2">
                 <a href="#about">
-                  <Button variant="primary" size="md">
+                  <Button variant="terracotta" size="md" className="rounded-full px-7">
                     <span>READ FULL BIOGRAPHY</span>
-                    <ArrowUpRight className="h-3.5 w-3.5 ml-1.5 text-gold-400" />
+                    <ArrowUpRight className="h-3.5 w-3.5 ml-1.5" />
                   </Button>
                 </a>
               </div>

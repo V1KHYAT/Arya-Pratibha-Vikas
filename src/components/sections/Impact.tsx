@@ -32,38 +32,38 @@ export const Impact: React.FC = () => {
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <Award className="h-4 w-4 text-navy-900" />
-                    <span className="text-xs font-bold text-navy-900">
+                    <Award className="h-4 w-4 text-terracotta-500" />
+                    <span className="text-xs font-bold text-terracotta-600 tracking-wide uppercase">
                       {fellow.cadre}
                     </span>
                   </div>
-                  <span className="meta-label text-ink-400 text-[10px]">
+                  <span className="text-xs font-bold text-ink-400">
                     {fellow.batch}
                   </span>
                 </div>
 
-                <div className="relative pl-4 border-l-2 border-gold-500">
-                  <Quote className="h-4 w-4 text-gold-500/40 absolute -top-1 -left-2" />
+                <div className="relative pl-4 border-l-2 border-terracotta-500">
+                  <Quote className="h-4 w-4 text-terracotta-500/30 absolute -top-1 -left-2" />
                   <p className="text-sm sm:text-base text-ink-800 leading-relaxed font-normal italic">
                     "{fellow.quote}"
                   </p>
                 </div>
 
-                <h4 className="text-xl sm:text-2xl font-bold text-navy-950">
+                <h4 className="text-xl sm:text-2xl font-bold text-ink-950">
                   {fellow.name}
                 </h4>
               </div>
 
               <div className="pt-6 border-t border-ink-900/5 flex items-center justify-between">
-                <span className="meta-label text-[10px] text-ink-400">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-ink-400">
                   Verified Result
                 </span>
 
                 <button
                   onClick={() => setActiveVideo(fellow)}
-                  className="inline-flex items-center space-x-2 text-xs font-bold text-navy-900 group-hover:text-gold-600 transition-colors focus:outline-none"
+                  className="inline-flex items-center space-x-2.5 text-xs font-bold text-ink-900 group-hover:text-terracotta-600 transition-colors focus:outline-none"
                 >
-                  <div className="h-7 w-7 rounded-pill bg-navy-900 text-white flex items-center justify-center group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors">
+                  <div className="h-7 w-7 rounded-full bg-terracotta-500 text-white flex items-center justify-center group-hover:bg-terracotta-600 transition-colors shadow-xs">
                     <Play className="h-3 w-3 fill-current ml-0.5" />
                   </div>
                   <span>Watch Video Memoir</span>

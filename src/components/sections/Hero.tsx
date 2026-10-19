@@ -1,7 +1,6 @@
 import React from "react";
-import { APV_DATA } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Compass, ShieldCheck } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { assetUrl } from "@/lib/utils";
 
 interface HeroProps {
@@ -10,138 +9,127 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
   return (
-    <section className="relative w-full pt-10 sm:pt-14 pb-16 sm:pb-24 lg:pb-32 overflow-hidden bg-paper">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Oversized Headline & Subtitle */}
-        <div className="pb-12 sm:pb-16 max-w-5xl space-y-6 sm:space-y-8">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-[5rem] font-bold text-navy-950 tracking-tight leading-[1.05]">
-            Where potential finds a path to public service.
-          </h1>
-          <p className="text-lg sm:text-xl text-ink-700 font-normal leading-relaxed max-w-3xl">
-            {APV_DATA.hero.subheadline}
-          </p>
+    <section className="relative w-full min-h-[calc(100vh-5rem)] bg-paper overflow-hidden flex flex-col justify-between">
+      {/* Decorative Warm Sandstone Arch Motif in Background */}
+      <div 
+        className="absolute right-0 sm:right-6 lg:right-16 xl:right-28 bottom-0 w-[340px] sm:w-[480px] lg:w-[580px] xl:w-[680px] aspect-[4/5] rounded-t-full pointer-events-none -z-0"
+        style={{
+          background: "radial-gradient(ellipse at 50% 80%, rgba(200, 90, 40, 0.22) 0%, rgba(235, 195, 160, 0.35) 45%, rgba(250, 247, 242, 0.1) 75%)",
+        }}
+      />
 
-          {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-5 pt-4">
-            <Button
-              onClick={onOpenApply}
-              variant="primary"
-              size="lg"
-              className="group px-8 sm:px-10 py-4 text-sm sm:text-base font-bold shadow-sm hover:shadow-md transition-all duration-200"
-            >
-              <span>APPLY NOW</span>
-              <ArrowUpRight className="h-4 w-4 ml-2.5 text-gold-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Button>
+      {/* Subtle Vedic Geometric Line Art Watermark in Bottom Left */}
+      <svg
+        className="absolute -bottom-20 -left-20 w-80 h-80 sm:w-96 sm:h-96 text-terracotta-500/10 pointer-events-none select-none z-0"
+        viewBox="0 0 200 200"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.8"
+      >
+        <circle cx="100" cy="100" r="92" strokeDasharray="3 3" />
+        <circle cx="100" cy="100" r="76" />
+        <circle cx="100" cy="100" r="56" />
+        <circle cx="100" cy="100" r="38" strokeDasharray="2 2" />
+        <path d="M100 8 L100 192 M8 100 L192 100 M35 35 L165 165 M35 165 L165 35" opacity="0.5" />
+        <polygon points="100,18 182,100 100,182 18,100" opacity="0.35" />
+        <polygon points="100,32 168,100 100,168 32,100" opacity="0.45" />
+      </svg>
 
-            <a href="#programs">
+      {/* Main Hero Container */}
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full pt-10 sm:pt-14 lg:pt-20 pb-8 z-10 flex-1 flex flex-col justify-between">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center flex-1">
+          {/* Left Column: Editorial Display Typography & CTAs */}
+          <div className="lg:col-span-7 xl:col-span-7 space-y-7 sm:space-y-9 pt-2 sm:pt-4">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5.4rem] 2xl:text-[6rem] font-bold text-ink-950 tracking-tight leading-[1.04]">
+              Where potential<br />
+              finds a path to<br />
+              <span className="text-terracotta-500">public service.</span>
+            </h1>
+
+            <p className="text-base sm:text-lg lg:text-xl text-ink-700 font-normal leading-relaxed max-w-xl">
+              A philanthropic initiative by Arya Samaj dedicated to identifying, mentoring, and fully sponsoring meritorious civil service aspirants across India for UPSC (IAS, IPS, IFS, IRS) and State Public Services.
+            </p>
+
+            {/* Action Buttons Row */}
+            <div className="flex flex-wrap items-center gap-4 sm:gap-5 pt-1">
               <Button
-                variant="outline"
+                onClick={onOpenApply}
+                variant="terracotta"
                 size="lg"
-                className="px-8 sm:px-10 py-4 text-sm sm:text-base font-bold transition-all duration-200"
+                className="group px-8 sm:px-9 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider shadow-sm hover:shadow-md transition-all duration-200"
               >
-                <Compass className="h-4 w-4 mr-2.5 text-navy-900" />
-                <span>EXPLORE PROGRAMS</span>
+                <span>APPLY NOW</span>
+                <ArrowUpRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Button>
-            </a>
-          </div>
-        </div>
 
-        {/* Large Editorial Photographic Composition (Occupying 60-70% visual field) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-4">
-          {/* Main Editorial Hero Photography: 8 Cols */}
-          <div className="lg:col-span-8 relative rounded-card-lg overflow-hidden card-border bg-white min-h-[380px] sm:min-h-[480px]">
-            <img
-              src={assetUrl("/assets/hero-1.jpg")}
-              alt="Arya Pratibha Vikas Sansthan Aspirants"
-              className="w-full h-full object-cover filter contrast-[1.03]"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = assetUrl("/assets/hero-4.jpg");
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/20 to-transparent" />
-            
-            {/* Overlay metadata */}
-            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div className="space-y-1 max-w-lg">
-                <span className="meta-label text-gold-400 text-[10px] tracking-widest">
-                  CAMPUS ECOSYSTEM • NEW DELHI
-                </span>
-                <p className="text-sm sm:text-base font-medium text-white/90">
-                  Sushil Raj Kendra: A residential sanctuary for full-time civil service preparation.
-                </p>
-              </div>
-              <span className="meta-label text-white/70 text-[11px] shrink-0">
-                100% NEED-BASED FELLOWSHIP
-              </span>
-            </div>
-          </div>
-
-          {/* Integrated Shri S.K. Arya & Leadership Feature Card: 4 Cols */}
-          <div className="lg:col-span-4 rounded-card-lg bg-navy-950 text-white p-7 sm:p-9 flex flex-col justify-between space-y-8 card-border-dark">
-            <div className="space-y-6">
-              <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                <span className="meta-label text-gold-400">
-                  FOUNDING INSPIRATION
-                </span>
-                <ShieldCheck className="h-4 w-4 text-gold-400" />
-              </div>
-
-              {/* Editorial Portrait Presentation of Shri S.K. Arya */}
-              <div className="flex items-center space-x-4">
-                <div className="h-16 w-16 rounded-pill overflow-hidden border border-white/20 bg-white/10 p-0.5 shrink-0">
-                  <img
-                    src={assetUrl("/assets/sk-arya-small.png")}
-                    alt={APV_DATA.skArya.name}
-                    className="h-full w-full object-cover rounded-pill"
-                    onError={(e) => {
-                      (e.target as HTMLElement).style.display = "none";
-                    }}
-                  />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg text-white leading-tight">
-                    {APV_DATA.skArya.name}
-                  </h3>
-                  <p className="text-xs text-ink-300">
-                    {APV_DATA.skArya.title}
-                  </p>
-                </div>
-              </div>
-
-              <blockquote className="text-sm text-ink-200 font-normal leading-relaxed italic border-l-2 border-gold-500/60 pl-3">
-                "{APV_DATA.skArya.quote}"
-              </blockquote>
-            </div>
-
-            <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs">
-              <span className="text-ink-400">JBM Group & Neel Foundation</span>
-              <a href="#inspiration" className="meta-label text-gold-400 hover:text-white transition-colors">
-                Read Story →
+              <a href="#programs">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-7 sm:px-8 py-4 rounded-full text-xs sm:text-sm font-bold tracking-wider border border-ink-900/20 hover:border-ink-900 bg-white/40 backdrop-blur-xs transition-all duration-200 flex items-center space-x-2.5"
+                >
+                  <span className="h-5 w-5 rounded-full border border-ink-900/50 flex items-center justify-center text-[10px] leading-none shrink-0">
+                    →
+                  </span>
+                  <span>EXPLORE PROGRAMS</span>
+                </Button>
               </a>
             </div>
           </div>
+
+          {/* Right Column (Mobile / Tablet Display: image card if below desktop) */}
+          <div className="lg:hidden w-full pt-4">
+            <div className="relative rounded-card-lg overflow-hidden border border-ink-900/10 shadow-md bg-paper-subtle aspect-[4/3] sm:aspect-[16/10]">
+              <img
+                src={assetUrl("/assets/hero-institution.jpg")}
+                alt="Aspirants ascending steps to Arya Samaj Institution"
+                className="w-full h-full object-cover object-bottom"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* High-Impact Stat Blocks (3 Columns) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8">
-          {APV_DATA.hero.metrics.map((m, i) => (
-            <div
-              key={i}
-              className="rounded-card bg-white p-7 sm:p-8 card-border flex flex-col justify-between space-y-3"
-            >
-              <span className="text-3xl sm:text-4xl font-bold text-navy-950 tracking-tight">
-                {m.value}
+        {/* Bottom Bar: Scroll Indicator */}
+        <div className="pt-12 sm:pt-16 pb-2 flex items-center justify-between text-xs text-ink-500">
+          <a
+            href="#about"
+            className="group flex flex-col items-start space-y-2 text-ink-600 hover:text-ink-950 transition-colors"
+          >
+            <div className="flex items-center space-x-2.5">
+              <span className="h-6 w-6 rounded-full border border-ink-900/25 flex items-center justify-center text-xs group-hover:border-ink-900 transition-colors">
+                ↓
               </span>
-              <div>
-                <p className="text-sm font-bold text-ink-900">
-                  {m.label}
-                </p>
-                <p className="text-xs text-ink-500 font-normal">
-                  {m.sub}
-                </p>
-              </div>
+              <span className="text-[11px] font-semibold tracking-wide">
+                Scroll to explore
+              </span>
             </div>
-          ))}
+            <div className="w-px h-8 bg-ink-900/20 ml-3 group-hover:bg-ink-900/50 transition-colors" />
+          </a>
+
+          <div className="hidden sm:flex items-center space-x-6 text-[11px] font-bold uppercase tracking-widest text-ink-400">
+            <span>UPSC (CSE)</span>
+            <span>•</span>
+            <span>STATE CIVIL SERVICES</span>
+            <span>•</span>
+            <span>100% RESIDENTIAL FELLOWSHIP</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right-Side Desktop Image Layer (Matches Reference Layout Exactly) */}
+      <div 
+        className="hidden lg:block absolute right-0 bottom-0 top-16 xl:top-20 w-[50%] xl:w-[53%] pointer-events-none select-none z-0 overflow-hidden"
+        style={{
+          maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 16%, black 36%, black 100%)",
+          WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 16%, black 36%, black 100%)",
+        }}
+      >
+        <div className="relative w-full h-full flex items-end justify-end">
+          <img
+            src={assetUrl("/assets/hero-institution.jpg")}
+            alt="Aspirants ascending steps to Arya Samaj Institution"
+            className="w-full h-full max-h-[90vh] object-cover object-bottom filter contrast-[1.02]"
+          />
         </div>
       </div>
     </section>
