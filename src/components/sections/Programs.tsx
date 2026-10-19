@@ -12,7 +12,7 @@ interface ProgramsProps {
 export const Programs: React.FC<ProgramsProps> = ({ onOpenApply }) => {
   return (
     <section id="programs" className="w-full section-gap bg-paper">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-16">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <SectionHeader

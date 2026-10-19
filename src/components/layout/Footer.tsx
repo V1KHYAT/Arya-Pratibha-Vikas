@@ -11,7 +11,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onOpenApply }) => {
   return (
     <footer className="w-full bg-navy-950 text-white pt-24 pb-16 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* 12-Column Grid Directory */}
         <div className="grid grid-cols-12 gap-10 lg:gap-16 pb-20 border-b border-white/10">
           {/* Col 1-5: Identity & Mission */}

@@ -10,7 +10,7 @@ interface FinalCtaProps {
 export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenApply }) => {
   return (
     <section className="w-full section-gap bg-navy-950 text-white relative overflow-hidden border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-10 sm:space-y-12">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 text-center space-y-10 sm:space-y-12">
         <div className="space-y-4 max-w-4xl mx-auto">
           <span className="text-[11px] font-bold uppercase tracking-widest text-terracotta-400">
             ADMISSIONS FOR BATCH 2026 NOW OPEN

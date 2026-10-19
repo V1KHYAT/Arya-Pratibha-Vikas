@@ -76,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
           : "bg-paper/80 backdrop-blur-xs border-b border-ink-900/5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 sm:h-24 flex items-center justify-between">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 h-20 sm:h-24 flex items-center justify-between">
         {/* Brand identity */}
         <a href="#" className="flex items-center space-x-3.5 group">
           <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-full bg-white p-1 border border-ink-900/10 flex items-center justify-center shrink-0 shadow-xs transition-transform group-hover:scale-105">

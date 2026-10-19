@@ -7,7 +7,7 @@ import { assetUrl } from "@/lib/utils";
 export const AryaSamaj: React.FC = () => {
   return (
     <section id="arya-samaj" className="w-full section-gap bg-navy-950 text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-16">
         {/* Top Label & Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-5 space-y-4">

@@ -13,35 +13,7 @@ export const Positioning: React.FC = () => {
 
   return (
     <section id="about" className="w-full section-gap bg-paper border-t border-ink-900/10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16 sm:space-y-24">
-        {/* High-Impact Stat Blocks: Warm Sandstone Modular Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {APV_DATA.hero.metrics.map((m, i) => (
-            <div
-              key={i}
-              className="rounded-card bg-white p-8 card-border flex flex-col justify-between space-y-3 shadow-xs hover:border-terracotta-500/30 transition-colors"
-            >
-              <span className="text-4xl sm:text-5xl font-bold text-ink-950 tracking-tight">
-                {m.value.startsWith("100") ? (
-                  <>100<span className="text-terracotta-500">%</span></>
-                ) : m.value.includes("+") ? (
-                  <>{m.value.replace("+", "")}<span className="text-terracotta-500">+</span></>
-                ) : (
-                  m.value
-                )}
-              </span>
-              <div className="space-y-1">
-                <p className="text-sm font-bold text-ink-900 tracking-wide uppercase text-xs">
-                  {m.label}
-                </p>
-                <p className="text-xs sm:text-sm text-ink-600 font-normal leading-relaxed">
-                  {m.sub}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-16 sm:space-y-20 lg:space-y-24">
         {/* Section Header & Manifesto */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pt-4">
           <div className="lg:col-span-5">

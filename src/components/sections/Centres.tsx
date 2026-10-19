@@ -10,7 +10,7 @@ export const Centres: React.FC = () => {
 
   return (
     <section id="centres" className="w-full section-gap bg-paper border-t border-ink-900/10">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-16">
+      <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-16">
         {/* Section Header */}
         <SectionHeader
           title="Our Primary Academic Campus"
