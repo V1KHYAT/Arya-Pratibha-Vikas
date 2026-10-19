@@ -70,10 +70,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenApply }) => {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         isScrolled
           ? "bg-paper/95 backdrop-blur-md border-b border-ink-900/10 shadow-xs"
-          : "bg-paper/80 backdrop-blur-xs border-b border-ink-900/5"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 h-20 sm:h-24 flex items-center justify-between">

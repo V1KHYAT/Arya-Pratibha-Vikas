@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { HeroCards } from "@/components/sections/HeroCards";
 import { Positioning } from "@/components/sections/Positioning";
 import { AryaSamaj } from "@/components/sections/AryaSamaj";
 import { Programs } from "@/components/sections/Programs";
@@ -24,8 +25,11 @@ export const App: React.FC = () => {
 
       {/* 11-Section Narrative Journey */}
       <main className="flex-1 w-full">
-        {/* 01: Hero with S.K. Arya Presence */}
+        {/* 01: Hero with Full Viewport Height */}
         <Hero onOpenApply={() => setApplyModalOpen(true)} />
+
+        {/* 01b: Original Hero Cards & Stats */}
+        <HeroCards />
 
         {/* 02: APV Positioning & 4 Values */}
         <Positioning />
