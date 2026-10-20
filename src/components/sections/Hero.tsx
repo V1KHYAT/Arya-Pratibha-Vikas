@@ -21,8 +21,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenApply }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-paper/95 via-paper/70 to-transparent lg:hidden" />
       </div>
 
-      {/* Main Content: Positioned upwards in the upper-left open white sky area */}
-      <div className="relative max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full z-10 pt-[clamp(6rem,12vh,9rem)]">
+      {/* Main Content: Positioned with balanced breathing room in the upper-left white sky area */}
+      <div className="relative max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1680px] 3xl:max-w-[1840px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full z-10 pt-28 sm:pt-36 lg:pt-40 xl:pt-44 2xl:pt-48">
         <div className="w-full lg:max-w-[54%] xl:max-w-[49%] 2xl:max-w-[45%] space-y-5 sm:space-y-6 lg:space-y-7">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.85rem] xl:text-[4.65rem] 2xl:text-[5.4rem] font-bold text-ink-950 tracking-tight leading-[1.04]">
             Where potential<br />
